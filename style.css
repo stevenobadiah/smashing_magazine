@@ -59,10 +59,44 @@ table {
           box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'concert-one';
+    src: url('font/ConcertOne-Regular.ttf');
+}
+
 header {
     display: block;
     height: 100px;
     background-color: rgb(71, 71, 71)
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'concert-one', sans-serif;
+}
+
+li {
+    color: white;
+    font-size: 25px;
+}
+
+#text-input {
+    border-radius: 15%;
+    width: 350px;
+    height: 60px;
 }
 
 main {
