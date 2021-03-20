@@ -1,0 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+    display: block;
+    height: 100px;
+    background-color: rgb(71, 71, 71)
+}
+
+main {
+    background-color: white;
+}
+
+section {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 8%;
+}
+
+.light-section {
+    background-color: rgb(250, 250, 250)
+}
+
+.grey-section {
+    background-color: rgb(243, 243, 243)
+}
+
+.dark-section {
+    background-color: rgb(85, 85, 85)
+}
+
+#headline-content {
+    float: left;
+    height: 600px;
+    width: 60%;
+    margin-top: 100px;
+    background-color: rgb(209, 209, 209)
+}
+
+.section-footer {
+    display: block;
+    clear: both;
+    padding: 100px 0 100px 0;
+}
+
+.section-footer-text {
+    line-height: 50px;
+    text-align: center;
+    margin: 0 40% 0 40%;
+    border-bottom: 5px solid rgb(85, 85, 85);
+}
+
+aside {
+    position: relative;
+    float: right;
+    width: 30%;
+    height: 500px;
+    margin-top: 100px;
+    background-color: rgb(212, 212, 212);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-tile-3c {
+    width: 33.3333%;
+    height: 600px;
+    margin-top: 40px;
+    border: 1px solid black;
+}
+
+.flex-tile-2c {
+    width: 49%;
+    height: 300px;
+    margin-top: 100px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.flex-article-link {
+    width: 49%;
+    height: 200px;
+    margin: 50px 0 50px 0;
+    padding-left: 80px;
+    border: 1px solid black;
+}
+
+.flex-tile-2c:nth-last-child(-n+2) {
+    margin-top: 40px;
+    height: 600px;
+}
+
+#community-section {
+    height: 900px;
+}
+
+#meet-click-section {
+    height: 900px;
+}
+
+#design-systems-section {
+    height: 400px;
+}
+
+#person-of-the-week {
+    height: 300px;
+    padding: 50px 0 50px 0;
+}
+
+#footer-section {
+    height: 750px;
+}
