@@ -61,7 +61,17 @@ table {
 
 @font-face {
     font-family: 'concert-one';
-    src: url('font/ConcertOne-Regular.ttf');
+    src: url('font/ConcertOne/ConcertOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'oxygen-bold';
+    src: url('font/Oxygen/Oxygen-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'oxygen-light';
+    src: url('font/Oxygen/Oxygen-Light.ttf');
 }
 
 header {
@@ -124,10 +134,85 @@ section {
 
 #headline-content {
     float: left;
-    height: 600px;
+    height: 1000px;
     width: 60%;
     margin-top: 100px;
-    background-color: rgb(209, 209, 209)
+}
+
+aside {
+    position: relative;
+    float: right;
+    width: 30%;
+    height: 700px;
+    margin-top: 100px;
+    background-color: rgb(212, 212, 212);
+}
+
+.article {
+    display: flex;
+    height: 25%;
+}
+
+#article-main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
+}
+
+.square, .square-small, #square-main, #person-of-the-week-square {
+    display: block;
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background-color: rgb(85, 85, 85);
+    transform: rotate(78deg);
+    border-radius: 10px;
+}
+
+#square-main {
+    width: 130px;
+    height: 130px;
+}
+
+.square-small {
+    width: 80px;
+    height: 80px;
+}
+
+.article-info, .sub-article-info, #article-info-main {
+    display: block;
+    padding-left: 30px;
+}
+
+#article-info-main {
+    display: block;
+    padding-left: 100;
+    height: 30%;
+    width: 70%;
+}
+
+.article-writer, .sub-article-writer, #article-writer-main {
+    display: block;
+    text-decoration: underline;
+    color: rgb(27, 16, 16);
+    font: 20px 'concert-one', sans-serif;
+}
+
+.article-title, .sub-article-title, #article-title-main {
+    display: block;
+    color: black;
+    font: 50px 'concert-one', sans-serif;
+    font-weight: 300;
+}
+
+#article-title-main {
+    font: 80px 'concert-one', sans-serif;
+}
+
+#main-article-exerpt {
+    padding: 0 20px 100px 20px;
+    font: 26px sans-serif;
+    font-weight: 200;
 }
 
 .section-footer {
@@ -139,16 +224,30 @@ section {
 .section-footer-text {
     line-height: 50px;
     text-align: center;
-    margin: 0 40% 0 40%;
+    margin: 0 42% 0 42%;
     border-bottom: 5px solid rgb(85, 85, 85);
 }
 
-aside {
-    position: relative;
+#community-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+#outsystems-box {
+    float: left;
+    width: 400px;
+    height: 250px;
+    border-radius: 5%;
+    background-color: rgb(85, 85, 85);
+}
+
+#join-community-box {
     float: right;
-    width: 30%;
+    width: 1000px;
     height: 500px;
-    margin-top: 100px;
+    border-radius: 3%;
     background-color: rgb(212, 212, 212);
 }
 
@@ -162,45 +261,201 @@ aside {
     width: 33.3333%;
     height: 600px;
     margin-top: 40px;
-    border: 1px solid black;
+    padding: 30px;
 }
 
 .flex-tile-2c {
     width: 49%;
-    height: 300px;
+    height: 350px;
     margin-top: 100px;
     background-color: white;
-    border: 1px solid black;
-}
-
-.flex-article-link {
-    width: 49%;
-    height: 200px;
-    margin: 50px 0 50px 0;
-    padding-left: 80px;
-    border: 1px solid black;
+    padding: 20px;
 }
 
 .flex-tile-2c:nth-last-child(-n+2) {
     margin-top: 40px;
-    height: 600px;
+    height: 800px;
 }
 
-#community-section {
-    height: 900px;
+.tile3-title, .tile2-title {
+    margin-top: 20px;
+    font-family: "oxygen-bold", sans-serif;
+    text-decoration: underline;
+}
+
+.tile3-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.tile2-title {
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.tile3-body, .tile2-body {
+    margin: 30px 0;
+    font: 25px/1.5 "oxygen-light", sans-serif;
+    font-weight: 300;
+}
+
+.tile-link {
+    background-color: rgb(85, 85, 85);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 30px;
 }
 
 #meet-click-section {
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    color: white;
+    font-size: 20px;
+    height: auto;
+}
+
+.meet-click {
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: 'concert-one', sans-serif;
+}
+
+#meet-click-heading {
+    font-size: 50px;
+    width: 50%;
+    text-decoration: underline;
+    text-decoration-color: rgb(243, 243, 243);
+}
+
+#meet-click-subheading {
+    font-size: 25px;
+    width: 60%;
+    line-height: 40px;
+}
+
+#meet-click-link {
+    width: 25%;
+    background-color: white;
+    color: rgb(85, 85, 85);
+    padding: 20px;
+    border-radius: 5%;
+    margin-top: 30px;
+    height: 70px;
+}
+
+#click-circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: rgb(102, 102, 102);
+}
+
+#email-newsletter {
+    background-color: rgb(85, 85, 85);
 }
 
 #design-systems-section {
+    display: flex;
+    flex-direction: column;
     height: 400px;
+    padding: 45px 60px;
+    color: white;
+}
+
+#design-subheading {
+    font-size: 20px;
+    width: 60%;
+    line-height: 40px;
+}
+
+#design-heading {
+    font-size: 50px;
+    width: 50%;
+    text-decoration: underline;
+    text-decoration-color: rgb(243, 243, 243);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#design-description {
+    font-size: 25px;
+    width: 60%;
+    line-height: 40px;
+}
+
+#design-link {
+    width: 22%;
+    background-color: white;
+    color: rgb(85, 85, 85);
+    padding: 20px;
+    border-radius: 5%;
+    margin-top: 30px;
+    height: 70px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#articles-section {
+    padding-top: 30px;
 }
 
 #person-of-the-week {
+    display: flex;
     height: 300px;
     padding: 50px 0 50px 0;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+#person-of-the-week-square {
+    width: 200px;
+    height: 200px;
+}
+
+#person-of-the-week-info {
+    padding-left: 60px;
+    width: 85%;
+}
+
+#person-of-the-week-caption {
+    color: rgb(85, 85, 85);
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+#person-of-the-week-text {
+    font: 20px/1.5;
+}
+
+.sub-article-link {
+    display: flex;
+    width: 49%;
+    height: 300px;
+    margin: 50px 0 50px 0;
+}
+
+.sub-article-info {
+    width: 90%;
+}
+
+.sub-article-writer {
+    margin-bottom: 10px;
+}
+
+.sub-article-title {
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.sub-article-description {
+    font-size: 22px;
+    line-height: 44px;
 }
 
 #footer-section {
